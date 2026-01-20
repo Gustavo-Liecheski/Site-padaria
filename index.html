@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Padaria Mão na Massa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Padaria Mão na Massa</h1>
+  <p>Pães, bolos e salgados fresquinhos todos os dias</p>
+</header>
+
+<section class="slider">
+  <div class="slides">
+    <img src="img/padaria.png" class="slide ativo">
+    <img src="img/funcionarios-padaria.png" class="slide">
+    <img src="img/padeiro.png" class="slide">
+  </div>
+</section>
+
+<main class="produtos" id="listaProdutos"></main>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="fechar" onclick="fecharModal()">×</span>
+
+    <h2 id="modalTitulo"></h2>
+    <p>Preço: R$ <span id="modalPreco"></span></p>
+
+    <label>
+      Quantidade:
+      <input type="number" id="quantidade" min="0.1" step="0.1" value="1">
+    </label>
+
+    <p>Total: R$ <span id="total">0.00</span></p>
+
+    <button onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+  </div>
+</div>
+
+<div class="conteiner2">
+    <section class="sobre">
+  <h2>Sobre nós</h2>
+  <p>
+    Somos uma padaria local focada em qualidade, tradição e atendimento próximo.
+  </p>
+</section>
+
+</div>
+
+<Div class="conteiner">
+    <section class="info">
+  <p><strong>Endereço:</strong> Rua Rio de Janeiro, 1234</p>
+  <p><strong>Horário:</strong> Seg–Sáb das 6h às 19h</p>
+    </section>
+</Div>
+
+<div class="conteiner">
+    <footer>
+  <p>© 2026 Panificadora Mão na Massa</p>
+    </footer>
+</div>
+
+<div class="carrinho" id="carrinho" onclick="toggleCarrinho()">
+  <span class="icone">🛒</span>
+
+  <div class="conteudo-carrinho">
+    <h2>Carrinho</h2>
+    <ul id="itensCarrinho"></ul>
+    <p id="totalCarrinho">Total: R$ 0,00</p>
+    <button onclick="finalizarPedido()">Finalizar no WhatsApp</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
